@@ -1,0 +1,39 @@
+package org.chavez.foro_hub.security.service;
+
+import org.chavez.foro_hub.global.dto.ResponsePage;
+import org.chavez.foro_hub.security.dto.*;
+import org.chavezz.foro_hub.security.dto.*;
+import org.chavez.foro_hub.security.models.User;
+import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.GrantedAuthority;
+
+import java.util.Collection;
+
+public interface IUserService {
+
+    User findUserByUsername(String username);
+
+    ResponseUser registerOneUser(RequestUserRegister requestUserRegister);
+
+    void changePassword(ChangePasswordRequest changePasswordRequest);
+
+    void disableUser( RequestDelete requestDelete);
+
+    ResponsePage<ResponseAdminUser> getAllUsersByAdmin(Pageable pageable);
+
+    ResponseAdminUser getUserByIdByAdmin(Long idUser);
+
+    ResponseAdminUser findUserByUsernameByAdmin(String username);
+
+    void enableUserByAdmin(Long idUser);
+
+    void disableUserByAdmin(Long idUser);
+
+    void deleteUserByAdmin(Long idUser);
+
+    void updateUserRoleByAdmin(Long idUser, RequestRole role);
+
+    String extractUsernameOfSecurityContext();
+
+    Collection<? extends GrantedAuthority> findAuthoritiesByUser(User user);
+}
