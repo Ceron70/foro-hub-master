@@ -24,13 +24,7 @@ La API incluye funcionalidades para la gestión de usuarios, roles, módulos, cu
 
 ---
 
-## ⚙️ Configuración del proyecto
 
-### 1. Clonar el repositorio
-
-```bash
-git clone https://github.com/tu-usuario/foro-hub.git
-cd foro-hub
 ```
 
 ---
