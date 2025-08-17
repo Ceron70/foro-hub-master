@@ -10,7 +10,7 @@ La API incluye funcionalidades para la gestión de usuarios, roles, módulos, cu
 
 ## 🚀 Tecnologías utilizadas
 
-* **Java 23**
+* **Java 21**
 * **Spring Boot 3**
 * **Spring Security**
 * **JWT (JSON Web Tokens)**
